@@ -1,84 +1,132 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #FFF2F2;
+    background: #FFF2F2;  /* Soft Pink Background */
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
+/* Container with Soft Blue */
 .container {
-    max-width: 800px;
-    margin: 50px auto;
+    background: #A9B5DF;  /* Light Blue */
+    border-radius: 15px;
     padding: 20px;
-    background-color: #A9B5DF;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-}
-
-h1 {
+    width: 90%;
+    max-width: 600px;
     text-align: center;
-    margin-bottom: 20px;
-    color: #2D336B;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    border: 2px solid #7886C7; /* Medium Blue Border */
 }
 
+/* Heading */
+h1 {
+    color: #2D336B; /* Dark Blue */
+    margin-bottom: 20px;
+}
+
+/* Form Styling */
 form {
     display: flex;
+    flex-direction: column;
     gap: 10px;
     margin-bottom: 20px;
 }
 
-form input, form select, form button {
+input, select, button {
     padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 2px solid #2D336B;
+    outline: none;
+    background: #FFF2F2;  /* Soft Pink Inputs */
+    color: #2D336B;
+    transition: 0.3s ease;
 }
 
-form button {
-    background-color: #7886C7;
-    color: white;
-    border: none;
+input::placeholder {
+    color: #2D336B;
+}
+
+select {
+    appearance: none;
     cursor: pointer;
 }
 
-form button:hover {
-    background-color: #2D336B;
+/* Button Styling */
+button {
+    background: #7886C7;  /* Medium Blue */
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
 }
 
-.expense-table table {
+button:hover {
+    background: #2D336B;  /* Dark Blue */
+}
+
+/* Expense Table */
+.expense-table {
+    margin-top: 20px;
+}
+
+table {
     width: 100%;
     border-collapse: collapse;
-    margin-bottom: 20px;
+    margin-top: 10px;
+    background: #7886C7; /* Medium Blue Table */
+    border-radius: 10px;
+    overflow: hidden;
 }
 
-.expense-table th, .expense-table td {
-    padding: 10px;
-    border: 1px solid #ddd;
-    text-align: left;
+thead {
+    background: #2D336B; /* Dark Blue */
 }
 
-.expense-table th {
-    background-color: #7886C7;
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
     color: white;
 }
 
+tbody tr:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Total Amount */
 .total-amount {
-    text-align: right;
+    margin-top: 15px;
     font-size: 18px;
     font-weight: bold;
-    color: #2D336B;
+    color: #2D336B;  /* Dark Blue */
 }
 
+/* Filter Section */
 .filter {
-    margin-bottom: 20px;
-    text-align: right;
-}
-
-.filter label {
-    margin-right: 10px;
+    margin-top: 20px;
     color: #2D336B;
 }
 
-.filter select {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+#filter-category {
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 5px;
+    background: #FFF2F2; /* Soft Pink Filter */
+    color: #2D336B;
+    border: 2px solid #2D336B;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    input, select, button {
+        font-size: 14px;
+    }
+
+    table {
+        font-size: 14px;
+    }
 }
